@@ -29,7 +29,7 @@ const questions = [{
         answer: "February 18"
     },
     {
-        question: "How hungry are you",
+        question: "How hungry is Chloe?",
         options: ["not", "sorta", "very", "extremely"],
         answer: "very"
     },
@@ -41,7 +41,7 @@ const questions = [{
     {
         question: "Knock knock",
         options: ["Who's there", "What", "Why", "No"],
-        answer: "Who's There"
+        answer: "Who's there"
     },
     {
         question: "What is Athena's favorite animal",
@@ -80,10 +80,13 @@ function load_question() {
                 question_number++;
                 document.querySelector("#correct").innerHTML = correct + " of " + question_number;
             }
-            load_question();
-            // while (question_number < 11) {
-            //     load_question();
-            // }
+
+            if (question_number < 10) {
+                load_question();
+            } else {
+                document.querySelector("body").innerHTML = "You completed the Quiz! You got " +
+                    correct + "questions correct!";
+            }
         }
     });
 }
