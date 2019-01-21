@@ -10,7 +10,7 @@ const questions = [{
     },
     {
         question: "What is Athena's favorite animal",
-        options: ["jellyfish", "penguins", "otters"],
+        options: ["jellyfish", "penguins", "otters", "frogs"],
         answer: "otters"
     },
     {
@@ -24,29 +24,31 @@ const questions = [{
         answer: "Washington"
     },
     {
-        question: "When is my birthday?",
-        options: ["February 18", "March 22", "September 13", "August 14"],
-        answer: "February 18"
+        question: "When is Martin Luther King Jr. Day?",
+        options: ["January 21", "March 22", "September 13", "August 14"],
+        answer: "January 21"
     },
     {
-        question: "How hungry is Chloe?",
-        options: ["not", "sorta", "very", "extremely"],
-        answer: "very"
+        question: "How much wood would a woodchuck chuck if a woodchuck could chuck wood?",
+        options: ["A woodchuck would chuck as much wood as it could chuck if a woodchuck could chuck wood",
+            "Sally sells seashells by the sea shore", "Peter piper picked a peck of pickeled peppers", "Some wood"
+        ],
+        answer: "A woodchuck would chuck as much wood as it could chuck if a woodchuck could chuck wood"
     },
     {
-        question: "Where is Trenton?",
-        options: ["New Jersey", "New York", "California", "North Dakota"],
-        answer: "New Jersey"
+        question: "Where is Harvard?",
+        options: ["Massachusetts", "New York", "California", "North Dakota"],
+        answer: "Massachusetts"
     },
     {
-        question: "Knock knock",
-        options: ["Who's there", "What", "Why", "No"],
-        answer: "Who's there"
+        question: "Which of these is not an animal",
+        options: ["Bird", "Cat", "Dog", "Tomato"],
+        answer: "Tomato"
     },
     {
-        question: "What is Athena's favorite animal",
-        options: ["jellyfish", "penguins", "otters"],
-        answer: "otters"
+        question: "Where am I?",
+        options: ["Yenching Auditorium", "Quincy", "North Dakota", "No where"],
+        answer: "Yenching Auditorium"
     }
 ];
 
@@ -85,7 +87,7 @@ function load_question() {
                 load_question();
             } else {
                 document.querySelector("body").innerHTML = "You completed the Quiz! You got " +
-                    correct + "questions correct!";
+                    correct + " questions correct!";
             }
         }
     });
